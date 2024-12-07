@@ -1,0 +1,155 @@
+* {
+  font-family: "Hachi Maru Pop", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 10px;
+  background: linear-gradient(
+    45deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+#app {
+  background-image: url(./img/background1.jpg);
+  width: 540px;
+  border-radius: 30px;
+  padding: 25px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header h1,
+.header img {
+  display: inline-block;
+}
+
+.header img {
+  display: inline-block;
+  width: 120px;
+}
+
+.taskInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.taskInput input {
+  font-size: 0.9em;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  height: 35px;
+  margin: 20px;
+  padding-left: 20px;
+  margin-right: 5px;
+  transition: ease-in-out 0.2s;
+}
+
+.taskInput input:focus {
+  filter: drop-shadow(0 0 2px #4444dd);
+}
+
+.taskInput button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 11px;
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  background: #3b5bdb;
+  margin-right: 20px;
+  transition: ease-in-out 0.2s;
+  filter: drop-shadow(0 4px #fff);
+}
+
+/*.taskInput button:hover {*/
+/*  transform: scale(1.2);*/
+/*}*/
+
+.taskInput button:active {
+  transform: translateY(3px);
+  filter: drop-shadow(0 1px #fff);
+}
+
+#taskContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#taskList {
+  width: 70%;
+  margin: auto;
+}
+
+#taskList li {
+  margin: 10px;
+  list-style: none;
+  user-select: none;
+  cursor: pointer;
+  border-bottom: dashed 1px transparent;
+  position: relative;
+  overflow-wrap: break-word;
+}
+
+#taskList li:hover {
+  border-bottom: dashed 1px #fff;
+}
+
+#taskList li::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border-radius: 50%;
+  left: -35px;
+  background-image: url("./img/check.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#taskList img {
+  width: 25px;
+  position: absolute;
+  right: -30px;
+  transition: ease 0.2s;
+}
+
+#taskList img:hover {
+  transform: scale(1.2);
+}
+
+#taskList li.checked {
+  text-decoration: line-through;
+}
+
+#taskList li.checked::before {
+  background-image: url("./img/checked.png");
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 78px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
