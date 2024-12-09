@@ -102,6 +102,8 @@
 }
 
 #taskList li {
+  display: inline-block;
+  width: 80%;
   margin: 10px;
   list-style: none;
   user-select: none;
@@ -129,9 +131,9 @@
 
 #taskList img {
   width: 25px;
-  position: absolute;
-  right: -30px;
   transition: ease 0.2s;
+  position: relative;
+  top: 8px;
 }
 
 #taskList img:hover {
